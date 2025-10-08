@@ -18,7 +18,7 @@ jobs:
         run: |
           git config --global user.name tedht
           git config --global user.email ted.herambert.dev@gmail.com
-          git add $nomFic
+          git add .
           git commit -m "Crée fichier Q4_archive_date"
           git pull
           git push
