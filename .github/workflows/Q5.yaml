@@ -1,0 +1,24 @@
+name: Q5_archive_date
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+permissions:
+  contents: write
+jobs:
+  archivage-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Crée fichier Q5_archive_date.txt
+        run: |
+          nomFic="Q5_archive_$(date +"%d-%m-%Y").txt" 
+          echo "HERAMBERT Ted" > $nomFic
+          cat Q5.java >> $nomFic
+      - name: Commmit et push
+        run: |
+          git config --global user.name tedht
+          git config --global user.email ted.herambert.dev@gmail.com
+          git config pull.rebase false
+          git add .
+          git commit -m "Crée fichier Q5_archive_date"
+          git push
