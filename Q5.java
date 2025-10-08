@@ -10,10 +10,10 @@ public class Q5
 		N = Integer.parseInt(args[0]);
 		triangle = "";
 
-		for(int i = 0;i < N; i++)
+		for(int i = N; i > 0; i--)
 		{
-			for(int j = 1;j <= i; j++)
-				triangle += Integer.toString(j) + ' ';
+			for(int j = 1 ;j <= i; j++)
+				triangle += ' ' + Integer.toString(j);
 			triangle += '\n';
 		}
 
