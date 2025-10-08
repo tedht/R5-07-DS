@@ -10,7 +10,7 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
       - name: Recopie contenu de TOTO.txt dans Q1_archive_TOTO.txt 
-        run: TOTO.txt > Q1_archive_TOTO.txt 
+        run: echo TOTO.txt > Q1_archive_TOTO.txt 
       - name: Commmit et push
         run: |
           git config --global user.name tedht
