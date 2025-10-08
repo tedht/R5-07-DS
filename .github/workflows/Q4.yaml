@@ -9,13 +9,11 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
-      - name: Crée fichier Q4_archive_date.txt
+      - name: Crée fichier Q4_archive_date.txt, Commmit et push
         run: |
           nomFic="Q4_archive_$(date +"%d-%m-%Y").txt" 
           echo "HERAMBERT Ted" > $nomFic
           cat Q4.java >> $nomFic
-      - name: Commmit et push
-        run: |
           git config --global user.name tedht
           git config --global user.email ted.herambert.dev@gmail.com
           git add $nomFic
