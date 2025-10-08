@@ -12,13 +12,13 @@ jobs:
       - name: Crée fichier Q4_archive_date.txt
         run: |
           nomFic="Q4_archive_$(date +"%d-%m-%Y").txt" 
-          echo "HERAMBERT Ted" > ${nomFic}
-          cat Q4.java >> ${nomFic}
+          echo "HERAMBERT Ted" > $nomFic
+          cat Q4.java >> $nomFic
       - name: Commmit et push
         run: |
           git config --global user.name tedht
           git config --global user.email ted.herambert.dev@gmail.com
-          git add ${nomFic}
-          git commit -m "Crée fichier ${nomFic}"
+          git add $nomFic
+          git commit -m "Crée fichier Q4_archive_date"
           git pull
           git push
