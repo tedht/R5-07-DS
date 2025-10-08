@@ -1,4 +1,4 @@
-name: Q3_archive_java
+name: Q4_archive_date
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 permissions:
@@ -9,15 +9,16 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
-      - name: Crée fichier Q3_archive_java.txt
+      - name: Crée fichier Q4_archive_date.txt
         run: |
-          echo "HERAMBERT Ted" > Q3_archive_java.txt 
-          cat Q3.java >> Q3_archive_java.txt 
+          nomFic="Q4_archive_$(date +"%d-%m-%Y")txt" 
+          echo "HERAMBERT Ted" > ${nomFic}
+          cat Q4.java >> ${nomFic}
       - name: Commmit et push
         run: |
           git config --global user.name tedht
           git config --global user.email ted.herambert.dev@gmail.com
-          git add Q3_archive_java.txt 
-          git commit -m "Crée fichier Q3_archive_java.txt"
+          git add Q4_archive_date.txt 
+          git commit -m "Crée fichier ${nomFic}"
           git pull
           git push

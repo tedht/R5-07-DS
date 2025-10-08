@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
-      - name: Crée ficher Q2_archive_TOTO.txt
+      - name: Crée fichier Q2_archive_TOTO.txt
         run: |
           echo "HERAMBERT Ted" > Q2_archive_TOTO.txt 
           date >> Q2_archive_TOTO.txt 
@@ -20,5 +20,5 @@ jobs:
           git config --global user.name tedht
           git config --global user.email ted.herambert.dev@gmail.com
           git add Q2_archive_TOTO.txt 
-          git commit -m "Crée ficher Q2_archive_TOTO.txt"
+          git commit -m "Crée fichier Q2_archive_TOTO.txt"
           git push
