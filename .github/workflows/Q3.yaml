@@ -19,4 +19,5 @@ jobs:
           git config --global user.email ted.herambert.dev@gmail.com
           git add Q3_archive_java.txt 
           git commit -m "Crée ficher Q3_archive_java.txt"
+          git pull
           git push
