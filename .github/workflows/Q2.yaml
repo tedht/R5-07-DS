@@ -14,7 +14,7 @@ jobs:
           echo "HERAMBERT Ted" > Q2_archive_TOTO.txt 
           date >> Q2_archive_TOTO.txt 
           cat TOTO.txt >> Q2_archive_TOTO.txt 
-          ls -lh TOTO.txt >> Q2_archive_TOTO.txt 
+          du -sh TOTO.txt >> Q2_archive_TOTO.txt 
       - name: Commmit et push
         run: |
           git config --global user.name tedht
