@@ -1,0 +1,24 @@
+name: Q2_archive_TOTO
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+permissions:
+  contents: write
+jobs:
+  archivage-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Crée un ficher Q2_archive_TOTO.txt
+        run: |
+          echo "HERAMBERT Ted" > Q2_archive_TOTO.txt 
+          date >> Q2_archive_TOTO.txt 
+          cat TOTO.txt >> Q2_archive_TOTO.txt 
+          ls -lh TOTO.txt >> Q2_archive_TOTO.txt 
+      - name: Commmit et push
+        run: |
+          git config --global user.name tedht
+          git config --global user.email ted.herambert.dev@gmail.com
+          git add Q2_archive_TOTO.txt 
+          git commit -m "Crée un ficher Q2_archive_TOTO.txt"
+          git push
